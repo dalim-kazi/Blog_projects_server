@@ -20,7 +20,8 @@ const handleJoiValidate = (validate) => {
             const errorMessages = details?.map(e => e.message);
             const errorMessage = errorMessages.join(", ");
             throw new BadRequest(errorMessage);
-        } catch (error) {
+        }
+        catch (error) {
             next(error); // Pass the error to the Express error handling middleware
         }
     };
