@@ -23,6 +23,7 @@ class NotFound extends generalError {
     super();
     (this.name = "NotFound"), (this.message = message);
   }
+  getCode(){return 404}
 }
 
 module.exports ={generalError,BadRequest,NotFound}
